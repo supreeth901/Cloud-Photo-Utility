@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Approval</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align = "left" class="container">
+    <form action="\adminview" method="POST">
+        <input type = "submit" value="Timeline" class="btn btn-primary">
+    </form>
+</div>
+<div align = "right" class="container">
+    <form action="\logout" method="POST">
+        <input type = "submit" value="Logout" class="btn btn-primary">
+    </form>
+</div>
+<h2 align="center" ><Strong>Welcome to SP Share</Strong></h2>
+<div>
+    <div class="container">
+           <form action="\approve" method="POST">
+               <label>Enter userid that needs to be approved</label><input type="text" name = "userid" class="form-control"><br>
+                   <input type = "submit" value="Approve" class="btn btn-primary">
+        </form>
+    </div><br>
+
+    <div class="container">
+        <table cellpadding="20" class="table table-hover" border="2px">
+     <tr>
+         <th>USERID</th>
+         <th>GROUP1</th>
+         <th>GROUP2</th>
+         <th>GROUP3</th>
+         <th>GROUP4</th>
+
+     </tr>
+    {% for row in res %}
+               <tr>
+                   <th>{{ row[0]}}</th>
+                   <th>{{ row[1]}}</th>
+                   <th>{{ row[2]}}</th>
+                   <th>{{ row[3]}}</th>
+                   <th>{{ row[4]}}</th>
+               </tr>
+    {%endfor%}
+    </table>
+    </div>
+
+</div>
+</body>
+</html>

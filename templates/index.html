@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to SP Share</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style = "background:#F8F8F8">
+<h2 align="center" ><Strong>Welcome to SP Share</Strong></h2>
+<div>
+    <div class="container">
+    <form action="/signup" method="POST">
+        <h3 style = "color:#006699"><Strong>Signup</Strong></h3>
+        <label>USER NAME:</label>(Alphanumeric but it should start with letter not number)<input type="text" name="name"  class="form-control" /></br>
+		<label>USERID:</label>(Alphanumeric but it should start with letter not number)<input type="text" name="userid" class="form-control" /></br>
+		<label>PASSWORD     :</label><input type="password" name="passwordsignup" class="form-control" /></br>
+        <label>GROUPS:</label>
+        <label class="checkbox-inline"><input type="checkbox" name="group" value ="1" />Group 1</label>
+        <label class="checkbox-inline"><input type="checkbox" name="group" value ="2" />Group 2</label>
+        <label class="checkbox-inline"><input type="checkbox" name="group" value ="3" />Group 3</label>
+        <label class="checkbox-inline"><input type="checkbox" name="group" value ="4" />Group 4</label><br>
+        <input type="submit" name="submit" class="btn btn-primary" value="Signup" /> <br><br>
+    </form>
+    </div>
+    <div class="container">
+    <form action="/login" method="POST">
+        <h3 style = "color:#006699"><Strong>Login</Strong></h3>
+        <label>USERID:</label><input type="text" name="usernameLogin"  class="form-control" /><br>
+        <label>PASSWORD</label><input type="password" name="passwordLogin" class="form-control" /><br>
+    <input type="submit" name="submit" class="btn btn-primary" value ="Login"/>
+    </form>
+    </div>
+</div>
+</body>
+</html>
